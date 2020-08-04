@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap');
+
+ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3, h4 {
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background: #F8F8F8;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+    max-width: 1140px;
+    padding: 0 50px;
+    margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+    color: black;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    min-height: 75px;
+}
+
+.logo__text {
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__list-item {
+    margin-right: 35px;
+}
+
+.header__list-item:last-child {
+    margin-right: 0;
+}
+
+.header__list-link {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.profile__info {
+    max-width: 350px;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.profile__avatar {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.profile__avatar-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile__name {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.profile__status {
+    text-align: center;
+    color: #a5a5a5;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.profile__id {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.profile__about-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.profile__about-desc {
+    font-size: 16px;
+    margin: 0;
+}
+
+.profile__inner {
+    padding: 50px 0;
+    display: flex;
+}
+
+.post {
+    width: 100%;
+}
+
+.post__inner {
+    margin-left: 50px;
+}
+
+.post__form-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.post__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.post__form-textarea {
+    width: 100%;
+    border: none;
+    min-height: 100px;
+    outline: none;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    resize: none;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    font-family: Open-sans, sans-serif;
+    font-size: 14px;
+}
+
+.post__form-btn {
+    max-width: 150px;
+    width: 100%;
+    align-self: flex-end;
+    padding: 18px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #22C993;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.AddPost__item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.AddPost__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.AddPost__info-avatar {
+    max-width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.AddPost__info-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.AddPost__info-name {
+    font-weight: 700;
+}
+
+.AddPost__desc-text {
+    font-size: 16px;
+    margin: 0;
 }
