@@ -1,19 +1,20 @@
 import React from "react";
+import style from './AddPost.module.css';
 
 const AddPost = () => {
     return (
-        <section className="AddPost">
+        <section className='addPost'>
             <div className="container">
-                <div className="AddPost__items">
-                    <div className="AddPost__item">
-                        <div className="AddPost__info">
-                            <div className="AddPost__info-avatar"><img
+                <div className={style.items}>
+                    <div className={style.item}>
+                        <div className={style.info}>
+                            <div className={style.infoAvatar}><img
                                 src="https://www.pngkit.com/png/full/639-6399637_henry-circle-gentleman.png" alt=""/>
                             </div>
-                            <div className="AddPost__info-name">Jhon Bewen</div>
+                            <div className={style.infoName}>Jhon Bewen</div>
                         </div>
-                        <div className="AddPost__desc">
-                            <p className="AddPost__desc-text">
+                        <div className={style.desc}>
+                            <p className={style.descText}>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum cumque impedit
                                 ipsa
                                 laudantium mollitia nam soluta? Aliquid cum, ea fuga fugiat iure modi, odio, perferendis
@@ -24,25 +25,15 @@ const AddPost = () => {
                             </p>
                         </div>
                     </div>
-
-                    <div className="AddPost__item">
-                        <div className="AddPost__info">
-                            <div className="AddPost__info-avatar"><img
+                    <div className={style.item}>
+                        <div className={style.info}>
+                            <div className={style.infoAvatar}><img
                                 src="https://www.pngkit.com/png/full/639-6399637_henry-circle-gentleman.png" alt=""/>
                             </div>
-                            <div className="AddPost__info-name">Jhon Bewen</div>
+                            <div className={style.infoName}>Jhon Bewen</div>
                         </div>
-                        <div className="AddPost__desc">
-                            <p className="AddPost__desc-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum cumque impedit
-                                ipsa
-                                laudantium mollitia nam soluta? Aliquid cum, ea fuga fugiat iure modi, odio, perferendis
-                                praesentium quam repellat sit. Cum excepturi odio quasi rerum voluptas! Animi deserunt
-                                earum
-                                eligendi, est, fugiat illo illum itaque laboriosam minus pariatur quidem quisquam
-                                repellendus voluptate. Aut doloremque eos, harum porro quaerat quibusdam quod.
-                            </p>
-                            <p className="AddPost__desc-text">
+                        <div className={style.desc}>
+                            <p className={style.descText}>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum cumque impedit
                                 ipsa
                                 laudantium mollitia nam soluta? Aliquid cum, ea fuga fugiat iure modi, odio, perferendis
