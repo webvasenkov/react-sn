@@ -1,0 +1,11 @@
+.inner {
+    display: flex;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    margin-left: 50px;
+    width: 100%;
+    justify-content: space-between;
+}

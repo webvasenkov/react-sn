@@ -1,0 +1,60 @@
+.header {
+    color: black;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 30px;
+    align-items: center;
+}
+
+.logoText {
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.list {
+    display: flex;
+}
+
+.listItem {
+    margin-right: 35px;
+}
+
+.listItem:last-child {
+    margin-right: 0;
+}
+
+.listLink {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.listLink:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #22C993;
+    width: 0;
+    bottom: -5px;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+
+.listLink:hover:before {
+    width: 100%;
+}
+
+.linkActive:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #22C993;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    transition: all .3s ease-in-out;
+}

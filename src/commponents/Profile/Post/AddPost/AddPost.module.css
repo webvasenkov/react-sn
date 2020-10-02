@@ -1,6 +1,5 @@
 .item {
     background: white;
-    border-radius: 15px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
@@ -32,4 +31,22 @@
 .descText {
     font-size: 16px;
     margin: 0;
+}
+
+.like {
+    display: flex;
+    margin-top: 20px;
+    margin-right: auto;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.likeImg {
+    width: 24px;
+}
+
+.likeCount {
+    color: #5a5a5a;
+    margin-left: 5px;
+    font-size: 15px;
 }

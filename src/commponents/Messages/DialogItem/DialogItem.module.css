@@ -1,0 +1,30 @@
+.dialogItem {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    padding: 15px 20px 15px 0;
+}
+
+.dialogItemAvatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dialogItemName {
+    margin-left: 25px;
+}
+
+.active:before {
+    content: '';
+    position: absolute;
+    background: #fcfcfc;
+    z-index: -1;
+    right: -33px;
+    left: -35px;
+    bottom: 0;
+    top: 0;
+}

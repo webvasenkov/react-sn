@@ -1,0 +1,16 @@
+.item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.text {
+    margin: 0;
+}
