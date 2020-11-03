@@ -1,17 +1,20 @@
 import React from "react";
 import style from './Messages.module.css';
-import {NavLink} from "react-router-dom";
 import DialogItem from './DialogItem/DialogItem';
 import MessageItem from './MessageItem/MessageItem';
+import Redirect from "react-router-dom/es/Redirect";
+import MessagesForm from "./MessagesForm";
+
 
 const Messages = (props) => {
+    let dialogElements = props.dialogData.map(dialog => <DialogItem img={dialog.img} id={dialog.id}
+                                                                    name={dialog.name}/>)
+    let messageElements = props.messageData.map(message => <MessageItem id={message.id} avatar={message.avatar}
+                                                                        message={message.message}/>)
 
-    let dialogElements = props.messagesState.dialogData.map(dialog => <DialogItem img={dialog.img} id={dialog.id} name={dialog.name}/>)
-    let messageElements = props.messagesState.messageData.map(message => <MessageItem id={message.id} avatar={message.avatar} message={message.message}/>)
-    let newMessage = React.createRef();
-    let sendMessage = () => {
-        let messageText = newMessage.current.value;
-        alert(messageText);
+    const onSubmit = (data) => {
+        let {textareaMessage: text} = data
+        props.onSendMessage(text)
     }
 
     return (
@@ -27,10 +30,7 @@ const Messages = (props) => {
                         <div className={style.messageItems}>
                             {messageElements}
                         </div>
-                        <form className={style.messageForm}>
-                            <textarea className={style.messageSend} ref={newMessage}></textarea>
-                            <button className={style.messageBtn} onClick={sendMessage} type='button'></button>
-                        </form>
+                        <MessagesForm onSubmit={onSubmit}/>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,57 @@
+.pagination {
+    margin-top: 35px;
+    display: flex;
+}
+
+.paginationList {
+    display: flex;
+}
+
+.paginationItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.paginationIte:nth-child(5+5n) {
+    margin-right: 0;
+}
+
+.paginationItem:hover {
+    color: #22C993;
+}
+
+.paginationActive {
+    color: #22C993;
+}
+
+.paginationItem:last-child {
+    margin-right: 0;
+}
+
+.paginationBtn {
+    background: url("../../../assets/img/arrow.svg") no-repeat center white;
+    background-size: 15px;
+    cursor: pointer;
+    border: none;
+    width: 35px;
+    height: 35px;
+    outline: none;
+    transition: all .3s ease;
+}
+
+.paginationBtn:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.paginationBtnLeft {
+    margin-right: 15px;
+}
+
+.paginationBtnRight {
+    transform: rotate(180deg);
+    margin-left: 15px;
+}

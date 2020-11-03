@@ -17,6 +17,7 @@
 
 .list {
     display: flex;
+    align-items: center;
 }
 
 .listItem {
@@ -25,7 +26,34 @@
 
 .listItem:last-child {
     margin-right: 0;
+    z-index: 2;
 }
+
+.listItemUser {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.listUserWrapper {
+    cursor: pointer;
+    transition: all .3s ease;
+    z-index: 1;
+    margin-right: 20px;
+}
+
+.listUserBtn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: url("../../assets/img/logout.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
 
 .listLink {
     text-transform: uppercase;
@@ -57,4 +85,24 @@
     bottom: -5px;
     left: 0;
     transition: all .3s ease-in-out;
+}
+
+.listLogin {
+    padding: 15px 35px;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    border: 1px solid #22C993;
+    color: #22C993;
+}
+
+.listLogin:hover {
+    background: #22C993;
+    color: white;
+    cursor: pointer;
 }

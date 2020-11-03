@@ -1,0 +1,35 @@
+.wrapperError textarea, .wrapperError input {
+  borde: 1px solid #ff003a;
+  width: 100%;
+}
+
+.wrapper textarea, wrapper input {
+  width: 100%;
+}
+
+.wrapperError {
+  position: relative;
+}
+
+.spanDescError {
+  color: #ff003a;
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0 15px;
+}
+
+.spanDescError img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+

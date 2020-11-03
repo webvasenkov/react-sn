@@ -1,24 +1,25 @@
 import React from "react";
 import style from './ProfileInfo.module.css'
+import Preloader from "../../Common/Preloader/Preloader";
+import avatarDefault from "../../../assets/img/avatar-default.jpg";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
+    if (!props.profile) {
+        return <Preloader/>
+    }
     return (
         <div className={style.info}>
             <div className={style.avatar}>
                 <img className={style.avatarImg}
-                     src="https://www.pngkit.com/png/full/639-6399637_henry-circle-gentleman.png"
+                     src={props.profile.photos.small != null ? props.profile.photos.small : avatarDefault}
                      alt="avatar"/>
             </div>
-            <div className={style.name}>Jhon Bewen</div>
-            <div className={style.status}>Hi, I am a business analyst</div>
-            <div className={style.id}>@jhonbew</div>
+            <div className={style.name}>{props.profile.fullName}</div>
+            <div className={style.status}>{props.profile.lookingForAJob === true ? 'Looking for a job' : 'Not looking for a job\n'}</div>
+            <div className={style.id}>@{props.profile.userId}</div>
             <div className={style.about}>
-                <h3 className={style.aboutTitle}>About me</h3>
-                <p className={style.aboutDesc}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eaque, in laudantium
-                    pariatur possimus quidem veniam veritatis? Aperiam cum, cumque maxime molestias possimus
-                    quidem reiciendis. Consectetur hic quidem quisquam sed!
-                </p>
+                <ProfileStatusWithHooks profile={props.profile} status={props.status} updateUserStatus={props.updateUserStatus}/>
             </div>
         </div>
     );

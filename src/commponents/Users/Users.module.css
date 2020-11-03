@@ -1,0 +1,98 @@
+.usersInner {
+    display: flex;
+    max-width: 930px;
+    width: 100%;
+    margin: -15px -30px;
+    flex-wrap: wrap;
+}
+
+.usersWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 30px;
+    max-width: 250px;
+    width: 100%;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userInfo:hover .avatar {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #e2e2e2;
+    transition: all .3s ease;
+}
+
+.fullName {
+    margin-top: 15px;
+    font-weight: 600;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+.lastName {
+    display: block;
+}
+
+.firstName {
+    margin-right: 5px;
+    display: block;
+}
+
+.followedBtn, .unFollowedBtn {
+    padding: 15px 35px;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.followedBtn:disabled,  followedBtn[disabled],
+.unFollowedBtn:disabled, unFollowedBtn[disabled] {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.followedBtn {
+    border: 1px solid #22C993;
+    color: #22C993;
+}
+
+.unFollowedBtn {
+    border: 1px solid #ff003a;
+    color: #ff003a;
+}
+
+.followedBtn:hover {
+    background: #22C993;
+    color: white;
+}
+
+.unFollowedBtn:hover {
+    background: #ff003a;
+    color: white;
+}
+
+
