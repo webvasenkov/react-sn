@@ -10,9 +10,10 @@ const Users = ({onPageChange, currentPage, itemsCountTotal, pageSize, onUnFollow
                 <div className={style.usersWrapper}>
                     <div className={style.usersInner}>
                         {users.map(user => <User user={user}
-                                                       followingInProgress={followingInProgress}
-                                                       onUnFollow={onUnFollow}
-                                                       onFollow={onFollow}
+                                                 key={user.id.toString()}
+                                                 followingInProgress={followingInProgress}
+                                                 onUnFollow={onUnFollow}
+                                                 onFollow={onFollow}
                         />)}
                     </div>
                     <Pagination onPageChange={onPageChange} currentPage={currentPage} portionSize={portionSize}

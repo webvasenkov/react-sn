@@ -2,8 +2,6 @@ import React from "react";
 import style from './Messages.module.css';
 import {Field, reduxForm} from "redux-form";
 import {compose} from "redux";
-import {Textarea} from "../Common/FormControl/FormControl";
-
 
 const MessagesForm = (props) => {
     return (

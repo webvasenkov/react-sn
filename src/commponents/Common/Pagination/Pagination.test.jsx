@@ -1,6 +1,5 @@
 import Pagination from "./Pagination";
 import {create} from 'react-test-renderer';
-import style from "./Pagination.module.css";
 
 describe(('Pagination component'), () => {
     test((`after create component left arrow shouldn't be displayed`), () => {

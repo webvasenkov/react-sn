@@ -1,11 +1,11 @@
 import React from "react";
 import style from './Login.module.css'
-import {LoginReduxForm} from "./LoginForm";
+import LoginForm from "./LoginForm";
 import {connect} from "react-redux";
 import {Authentication} from "../../redux/reducer/authReducer";
-import Redirect from "react-router-dom/es/Redirect";
+import {Redirect} from "react-router-dom";
 
-const Login = ({Authentication, isAuth}) => {
+const Login = ({Authentication, isAuth, captchaUrl}) => {
     const onSubmit = (formData) => {
         Authentication(formData)
     }
@@ -19,7 +19,7 @@ const Login = ({Authentication, isAuth}) => {
             <div className="container">
                 <div className={style.inner}>
                     <h2 className={style.title}>LogIn</h2>
-                    <LoginReduxForm onSubmit={onSubmit}/>
+                    <LoginForm onSubmit={onSubmit} captchaUrl={captchaUrl}/>
                 </div>
             </div>
         </section>
@@ -28,7 +28,8 @@ const Login = ({Authentication, isAuth}) => {
 
 let mapStateToProps = (state) => {
     return {
-        isAuth: state.auth.isAuth
+        isAuth: state.auth.isAuth,
+        captchaUrl: state.auth.captchaUrl
     }
 }
 

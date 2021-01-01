@@ -1,5 +1,4 @@
 import React from 'react';
-import style from './News.module.css';
 import withAuthRedirect from "../../HOC/withAuthRedirect";
 
 const News = (props) => {

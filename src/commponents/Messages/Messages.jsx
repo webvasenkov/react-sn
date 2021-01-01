@@ -2,7 +2,6 @@ import React from "react";
 import style from './Messages.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import MessageItem from './MessageItem/MessageItem';
-import Redirect from "react-router-dom/es/Redirect";
 import MessagesForm from "./MessagesForm";
 
 

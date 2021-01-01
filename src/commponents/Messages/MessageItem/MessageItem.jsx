@@ -4,7 +4,7 @@ import style from './MessageItem.module.css';
 const MessageItem = (props) => {
     return (
         <div className={style.item}>
-            <img className={style.avatar} src={props.avatar}></img>
+            <img className={style.avatar} src={props.avatar} alt='avatar'></img>
             <p className={style.text}>{props.message}</p>
         </div>
     )

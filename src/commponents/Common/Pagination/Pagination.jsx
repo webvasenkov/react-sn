@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import style from "./Pagination.module.css"
+import classNames from 'classnames'
 
 const Pagination = ({itemsCountTotal, pageSize, onPageChange, currentPage, portionSize}) => {
     let countPages = Math.ceil(itemsCountTotal / pageSize)
@@ -17,21 +18,20 @@ const Pagination = ({itemsCountTotal, pageSize, onPageChange, currentPage, porti
     return (
         <div className={style.pagination}>
             {portionNumber > 1 &&
-            <button className={`${style.paginationBtn} ${style.paginationBtnLeft}`} onClick={() => setPortionNumber(portionNumber - 1)}></button>
+            <button className={classNames(style.paginationBtn, style.paginationBtnLeft)} onClick={() => setPortionNumber(portionNumber - 1)}></button>
             }
             <ul className={style.paginationList}>
                 {pages
                     .filter((page) => page >= leftPortion && page <= rightPortion)
-
                     .map((page) => {
                         return (
-                            <li onClick={(event) => onPageChange(page)}
-                                className={currentPage === page ? `${style.paginationItem} ${style.paginationActive}` : style.paginationItem}>{page}</li>
+                            <li key={currentPage.toString()} onClick={(event) => onPageChange(page)}
+                                className={classNames(style.paginationItem, {[style.paginationActive]: currentPage === page})}>{page}</li>
                         )
                     })}
             </ul>
             {countPortion !== portionNumber &&
-            <button className={`${style.paginationBtn} ${style.paginationBtnRight}`} onClick={() => setPortionNumber(portionNumber + 1)}></button>
+            <button className={classNames(style.paginationBtn, style.paginationBtnRight)} onClick={() => setPortionNumber(portionNumber + 1)}></button>
             }
         </div>
     )

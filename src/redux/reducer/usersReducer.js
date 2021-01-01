@@ -9,6 +9,7 @@ const PRELOADER = 'sn/users/PRELOADER'
 const FOLLOWING_PROGRESS = 'sn/users/FOLLOWING_PROGRESS'
 const SET_TOTAL_COUNT = 'sn/users/SET_TOTAL_COUNT'
 
+
 let initState = {
     users: [],
     itemsCountTotal: 0,

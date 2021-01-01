@@ -32,9 +32,10 @@ class UsersContainer extends React.Component {
     }
 
     render = () => {
-        return <>
-            <Preloader isFetching={this.props.isFetching}/>
-            <Users users={this.props.users}
+        if (!this.props.users) {
+            return <Preloader/>
+        }
+        return <Users users={this.props.users}
                    itemsCountTotal={this.props.itemsCountTotal}
                    pageSize={this.props.pageSize}
                    currentPage={this.props.currentPage}
@@ -44,7 +45,6 @@ class UsersContainer extends React.Component {
                    onUnFollow={this.onUnFollow}
                    portionSize={this.props.portionSize}
             />
-        </>
     }
 }
 

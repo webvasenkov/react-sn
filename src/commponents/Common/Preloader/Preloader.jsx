@@ -3,10 +3,10 @@ import preloader from "../../../assets/img/preloader.svg";
 import style from './Preloader.module.css'
 
 
-const Preloader = (props) => {
+const Preloader = () => {
     return (
         <div className={style.preloader}>
-            {props.isFetching && <img alt="" src={preloader}/>}
+            <img alt="" src={preloader}/>
         </div>
     )
 }

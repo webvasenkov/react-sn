@@ -26,7 +26,7 @@ const ProfileStatusWithHooks = (props) => {
     return (
         <div className={style.about}>
             <h3 className={style.aboutTitle}>My mood</h3>
-            {editMode ?
+            { editMode ?
                 <form className={style.editDesc}>
                     <input className={style.editInput} onBlur={onCloseEditChange} autoFocus={true}
                            value={status} onChange={onStatusChange} placeholder='Edit status'/>

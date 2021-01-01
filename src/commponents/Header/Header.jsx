@@ -1,7 +1,6 @@
 import React from "react";
 import style from './Header.module.css';
 import {NavLink} from "react-router-dom";
-import Redirect from "react-router-dom/es/Redirect";
 
 const Header = (props) => {
     const exit = () => {
@@ -46,8 +45,7 @@ const Header = (props) => {
                                     <div className={style.listUserWrapper}>{props.login}</div>
                                     <button className={style.listUserBtn} onClick={exit}></button>
                                 </div>
-                                : <NavLink className={style.listLogin} activeClassName={style.linkActive} to="/login">Log
-                                    In</NavLink>}
+                                : <NavLink className={style.listLogin} to="/login">Log In</NavLink>}
                         </li>
                     </ul>
                 </nav>

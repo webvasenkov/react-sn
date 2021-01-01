@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    font-weight: 700;
+}
+.itemForm {
+    margin-bottom: 20px;
+}
+
+.itemForm textarea, .itemForm input {
+    margin-top: 5px;
+}
+
+.itemJob {
+    display: flex;
+    align-items: center;
+}
+
+.btnSave {
+    align-self: flex-end;
+    padding: 15px 35px;
+    color: white;
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: #22C993;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 18px;
+}
